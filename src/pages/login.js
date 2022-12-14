@@ -6,8 +6,8 @@ import NavBar from "../components/navbar";
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react';
 
-import awsExports from '../aws-exports';
-Amplify.configure(awsExports);
+import awsmobile from '../aws-exports';
+Amplify.configure(awsmobile);
 
 const Login = () =>{
 
