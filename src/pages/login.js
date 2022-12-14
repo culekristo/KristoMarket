@@ -1,29 +1,28 @@
-import React, {useState} from 'react';
-import NavBar from "../components/navbar";
-//import {Auth} from "aws-amplify";
+import React, { useState } from 'react';
+import { Amplify } from 'aws-amplify';
 
-/* function userlogin() {
-  Auth.signIn(username, password).then((result) => {
-    //Success 
-   }).catch((err) => {
-    // Something is Wrong
-   })
-} */
+import NavBar from "../components/navbar";
+
+import { Authenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react';
+
+import awsExports from '../aws-exports';
+Amplify.configure(awsExports);
 
 const Login = () =>{
-  //const [username, password] = useState(0);
 
   return (
     <div>
       <h3>Login</h3>
       <NavBar />
-      <div class="form">
-        <label for="email">Email</label>
-        <input type="email" id="email" />
-        <label for="password">Password</label>
-        <input type="password" id="password" />
-        <input type="submit" id="submit" value="Submit" />
-      </div>
+      <Authenticator>
+        {({ signOut, user }) => (
+          <main>
+            <h1>Hello {user.username}</h1>
+            <button onClick={signOut}>Sign out</button>
+          </main>
+        )}
+      </Authenticator>
     </div>
   );
 }
