@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import React from "react";
 import {
@@ -8,7 +9,6 @@ import {
 
 import Home from "./pages/home";
 import About from "./pages/about";
-import Signup from "./pages/signup";
 import Login from "./pages/login";
 
 const router = createBrowserRouter([
@@ -23,10 +23,6 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
   },
   {
     path: "/login",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Amplify } from 'aws-amplify';
 
 import NavBar from "../components/navbar";
@@ -13,7 +13,6 @@ const Login = () =>{
 
   return (
     <div>
-      <h3>Login</h3>
       <NavBar />
       <Authenticator>
         {({ signOut, user }) => (
