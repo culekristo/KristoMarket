@@ -1,0 +1,31 @@
+{
+  "authSelections": "userPoolOnly",
+  "resourceName": "mjmaps1251a60b",
+  "serviceType": "imported",
+  "region": "us-east-1",
+  "usernameAttributes": [
+    "email",
+    "phone_number"
+  ],
+  "requiredAttributes": [
+    "name",
+    "email",
+    "birthdate",
+    "phone_number"
+  ],
+  "passwordPolicyMinLength": 10,
+  "passwordPolicyCharacters": [
+    "Requires Lowercase",
+    "Requires Uppercase",
+    "Requires Numbers",
+    "Requires Symbols"
+  ],
+  "mfaConfiguration": "OPTIONAL",
+  "autoVerifiedAttributes": [
+    "email",
+    "phone_number"
+  ],
+  "mfaTypes": [
+    "SMS Text Message"
+  ]
+}
