@@ -1,0 +1,17 @@
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    padding-top: 10px;
+  }
+  
+  .item {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+  }
+
+  

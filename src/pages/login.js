@@ -1,28 +1,36 @@
-import React from 'react';
-import { Amplify } from 'aws-amplify';
+import React from "react";
+import { Amplify } from "aws-amplify";
+import { Authenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react";
 
 import NavBar from "../components/navbar";
+import "./login.css";
+import awsmobile from "../aws-exports";
 
-import { Authenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react';
-
-import awsmobile from '../aws-exports';
 Amplify.configure(awsmobile);
 
-const Login = () =>{
+export default class Login extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-  return (
-    <div>
-      <NavBar />
-      <Authenticator>
-        {({ signOut, user }) => (
-          <main>
-            <h1>Hello {user.getUsername}</h1>
-            <button onClick={signOut}>Sign out</button>
-          </main>
-        )}
-      </Authenticator>
-    </div>
-  );
+/*   AuthContainer() {
+    <div class="authenticator-container">
+      <Authenticator />
+    </div>;
+  } */
+
+  render() {
+    return (
+      <div>
+        <NavBar />
+        <div className="login-container">
+          <div className="auth-container">
+            <Authenticator className="login"></Authenticator>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-export default Login;
