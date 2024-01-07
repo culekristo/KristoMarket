@@ -6,7 +6,7 @@ const About = () =>{
     <div className='text-center'>
       <NavBar/>
       <h1>About Us</h1>
-      <p>Welcome to our company! We offer a wide range of products that are normally hard to purchase online:</p>
+      <p>Welcome to our company!</p>
       <ul>
         <li>Service 1</li>
         <li>Service 2</li>
